@@ -1,0 +1,1 @@
+"""Python modernization MCP adapter."""

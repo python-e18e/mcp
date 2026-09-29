@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-e18e-mcp"
+version = "0.1.0"
+description = "Python modernization advice and codemod previews over MCP"
+requires-python = ">=3.11"
+readme = "README.md"
+license = "MIT"
+dependencies = ["mcp>=2,<3", "packaging>=24", "python-e18e-codemods @ git+https://github.com/python-e18e/codemods.git@47a988cbdc07766ba34c17e9e19eaefe2a3c8f90"]
+
+[project.scripts]
+python-e18e-mcp = "python_e18e_mcp.server:main"
+
+[project.urls]
+Repository = "https://github.com/python-e18e/mcp"
+Issues = "https://github.com/python-e18e/mcp/issues"
+
+[tool.setuptools.packages.find]
+include = ["python_e18e_mcp*"]
